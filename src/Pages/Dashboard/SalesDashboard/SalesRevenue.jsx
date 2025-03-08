@@ -1,34 +1,36 @@
 import React from "react";
-import Sidebar from "./Shared/Sidebar";
-import Header from "./Shared/Header";
-import AnalyticsOverview from "./Widgets/AnalyticsOverview";
+import Layout from "./Shared/Layout";
+import AnalyticsOverview from "../MarkatingDashboard/Widgets/AnalyticsOverview";
 import Todaysales from "./Widgets/Todaysales";
+import RevenueInsights from "./Widgets/RevenueInsights";
+import RevenuePieChart from "./Widgets/RevenuePieChart";
+import RevenueOverviewChart from "./Widgets/RevenueOverviewChart";
 
-const Dashboard = () => {
+const SalesRevenue = () => {
   return (
-    <div className="flex bg-gray-900 text-white min-h-screen">
-      {/* Sidebar */}
-      <Sidebar />
-
-      {/* Main Content */}
-      <div className="flex flex-col flex-1">
-        {/* Header */}
-        <Header username="John" />
-
-      {/* Widgets Section */}
-      <div className="p-6">
+    <Layout>
+    {/* Widgets Section */}
+    <div className="p-4">
           <AnalyticsOverview />
-      <div className="p-6 mr-70">
-          <Todaysales />
- 
+          <div className="p-6">
+  <div className="flex gap-4"> {/* Flexbox layout with spacing */}
+    <Todaysales className="flex-1" /> 
+    <RevenueInsights /> 
 
+  </div>
+    {/* Revenue Pie Chart Below */}
+    <div className="mt-6 p-6 ">
+            <RevenuePieChart />
+          </div>
+      {/* Revenue Pie Chart Below */}
+    <div className="mt-6 p-6 ">
+            <RevenueOverviewChart />
+          </div>
       </div>
 
       </div>
-    </div>
-    </div>
-
+    </Layout>
   );
 };
 
-export default Dashboard;
+export default SalesRevenue;

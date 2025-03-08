@@ -40,7 +40,7 @@ const SalesSummary = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-[#121241] text-white p-6 rounded-2xl shadow-lg w-full"
+      className="bg-[#121241] text-white p-6 rounded-2xl shadow-lg w-210"
     >
       {/* Title Section */}
       <h2 className="text-lg font-semibold text-center">Today's Sales</h2>

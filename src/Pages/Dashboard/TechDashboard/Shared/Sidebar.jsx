@@ -4,18 +4,18 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import {
   Home,
-  BarChart,
-  ShoppingCart,
-  Calendar,
+  File,
   Settings,
   ChevronRight,
+  Users,
+  Star,
 } from "lucide-react";
 
 const menuItems = [
-  { name: "Dashboard", icon: Home, path: "/" },
-  { name: "Revenue", icon: BarChart, path: "/revenue" },
-  { name: "Orders", icon: ShoppingCart, path: "/orders" },
-  { name: "Calendar", icon: Calendar, path: "/calendar" },
+  { name: "Dashboard", icon: Home, path: "/tech" },
+  { name: "Projects", icon: Star, path: "/projects" },
+  { name: "Team", icon: Users, path: "/team" },
+  { name: "Report", icon: File, path: "/report" },
 ];
 
 const Sidebar = () => {

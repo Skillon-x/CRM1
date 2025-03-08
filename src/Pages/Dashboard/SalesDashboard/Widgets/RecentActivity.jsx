@@ -27,7 +27,7 @@ const activities = [
 
 const RecentActivity = () => {
   return (
-    <Card className="bg-[#121241] text-white shadow-lg p-6 rounded-2xl w-full max-w-md">
+    <Card className="bg-[#0B1739] text-white shadow-lg p-6 rounded-2xl w-full max-w-md border-none">
       <CardHeader>
         <motion.div 
           initial={{ opacity: 0, y: -10 }} 

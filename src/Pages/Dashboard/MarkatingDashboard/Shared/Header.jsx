@@ -12,16 +12,11 @@ const Header = ({ username }) => {
     "Security alert: New login detected",
   ]);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   const handleNotificationClick = (index) => {
     const updatedNotifications = notifications.filter((_, i) => i !== index);
     setNotifications(updatedNotifications);
   };
-
-  const filteredNotifications = notifications.filter((notification) =>
-    notification.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <motion.header
@@ -46,8 +41,6 @@ const Header = ({ username }) => {
           <Input
             type="text"
             placeholder="Type here..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
             className="bg-[#131520] text-white pl-10 pr-4 py-2 rounded-lg border border-gray-700 focus:border-gray-500 focus:ring-0"
           />
         </motion.div>
@@ -78,8 +71,8 @@ const Header = ({ username }) => {
               transition={{ duration: 0.2 }}
               className="absolute right-0 mt-2 w-64 bg-[#131520] border border-gray-700 shadow-lg rounded-lg overflow-hidden z-50"
             >
-              {filteredNotifications.length > 0 ? (
-                filteredNotifications.map((notification, index) => (
+              {notifications.length > 0 ? (
+                notifications.map((notification, index) => (
                   <div
                     key={index}
                     className="px-4 py-2 text-sm hover:bg-gray-800 cursor-pointer transition"

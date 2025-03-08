@@ -74,7 +74,7 @@ const projects = [
 
 const ProjectTable = () => {
   return (
-    <Card className="bg-[#121241] text-white shadow-xl p-6 rounded-2xl">
+    <Card className="bg-[#0B1739] text-white shadow-xl p-6 rounded-2xl border-none">
       <CardHeader>
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <CardTitle className="text-lg font-semibold flex items-center">

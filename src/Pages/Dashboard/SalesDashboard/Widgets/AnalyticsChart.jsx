@@ -15,7 +15,7 @@ const data = [
 
 const RevenueAreaChart = () => {
   return (
-    <Card className="bg-[#081028] text-white shadow-lg p-4">
+    <Card className="bg-[#0B1739] text-white shadow-lg p-4 w-6xl border-none ">
       <CardHeader>
         <CardTitle>Expected Revenue vs. Actual Revenue</CardTitle>
       </CardHeader>
